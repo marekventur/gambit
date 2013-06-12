@@ -1,0 +1,42 @@
+<head>
+	<title>Gambit, Gamevy's latest massively multiplayer online game show</title>
+</head>
+<body>
+	{{> header}}
+</body>
+
+<template name="header">
+	<div class="header">
+		<div class="navbar">
+			<div class="navbar-inner">
+				<div class="container">
+					<div class="nav pull-right">
+						{{> user_info}}
+					</div>
+				</div>
+			</div>		
+		</div>
+	</div>
+</template>
+
+<template name="user_info">
+	<ul class="nav pull-right">
+		{{#if currentUser}}
+			{{> user_loggedin}}
+		{{else}}
+			{{> user_loggedout}}
+		{{/if}}
+	</ul>
+</template>
+
+<template name="user_loggedin">
+	{{#if loggingIn}}
+		<li><a>Logging in...</a></li>
+	{{else}}
+	
+	{{/if}}
+</template>
+
+<template name="user_loggedout">
+	
+</template>
