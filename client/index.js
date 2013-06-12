@@ -1,9 +1,10 @@
 Template.user_loggedout.events({
 	"click #login": function (e, tmpl) {
-		Meteor.loginWithFacebook({
-			requestPermissions: ['name']
+		Meteor.loginWithTwitter({
+			requestPermissions: ['user','read']
 		}, function(err) {
 				if (err) {
+					alert(err);
 				} else {
 				}
 			});

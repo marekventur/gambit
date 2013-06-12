@@ -8,4 +8,5 @@ insecure
 preserve-inputs
 accounts-ui
 bootstrap
-accounts-facebook
+accounts-twitter
+accounts-password

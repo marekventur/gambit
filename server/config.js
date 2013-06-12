@@ -1,13 +1,14 @@
 Meteor.startup(function () {
+	Meteor.absoluteUrl('', {replaceLocalhost: true});
 	Accounts.loginServiceConfiguration.remove(
-		{service: "facebook"}	
+		{service: "twitter"}	
 	)
 	
 	Accounts.loginServiceConfiguration.insert(
 		{		
-			service: 		"facebook",
-			consumerKey: 	"304982879637523",
-			secret: 			"72fde06b437b491dca9d61e916199348"
+			service: 		"twitter",
+			consumerKey: 	"lqpNeU2AreWVQ052cQ0PCg",
+			secret: 			"5BPqrGKAXVz6e0QIcATw66BU6hkkqOKf3qQpqz5Q"
 		}
 	)
 });
