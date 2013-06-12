@@ -1,5 +1,5 @@
 1. User login (using custom login through password, twitter and facebook smart packages)
-2. On index.html show two panels - one that lists Games that aren't full of Players, and another that lists active (those without a stale connection) Users
+2. On index.html show two panels - one that lists Games that aren't full of Players, and another that lists active (those without a stale connection) Users (Meteor/Presence package?)
 3. User can create a game and becomes the first Player (game can't begin until it has at least two Players)
 4. Users can join a game and become Players
 5. Players in a game each have a Hand of Cards. A Player starts the Game with 0 Cards.
