@@ -1,0 +1,9 @@
+1. User login (using custom login through password, twitter and facebook smart packages)
+2. On index.html show two panels - one that lists Games that aren't full of Players, and another that lists active (those without a stale connection) Users (Meteor/Presence package?)
+3. User can create a game and becomes the first Player (game can't begin until it has at least two Players)
+4. Users can join a game and become Players
+5. Players in a game each have a Hand of Cards. A Player starts the Game with 0 Cards.
+6. Each Game has 1 Deck of Cards that is controlled by the Dealer (see https://github.com/danrough/gambit-players-ui/index.html)
+7. The Card at the top of the Deck should be shown to all Players in the Game (see https://github.com/danrough/gambit-players-ui/index.html)
+8. All Players in the Game can see the Cards in each other's Hands. (see https://github.com/danrough/gambit-players-ui/index.html)
+9. A Player should be able to take the Card that is on display, or push it to another Player in the game (see https://github.com/danrough/gambit-players-ui/index.html)
