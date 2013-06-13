@@ -1,14 +1,27 @@
 <head>
-
+	<link href="css/gambit.css" rel="stylesheet">
 </head>
 <body>
-{{> competitor_view}}
-{{> opponents_view }}
+
 </body>
+
+<template name="game_page">
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span5">
+		{{> competitor_view}}
+		{{> opponents_view }}
+		</div>
+		<div class="span7">
+		{{> dealers_view}}
+		</div>
+	</div>
+</div>
+</template>
 
 <template name="competitor_view">
 <div id="player-one-container" class="players-view">
-	<h4 class="players-name">AAA</h4>
+	<h4 class="players-name">Competitor</h4>
 	<div id="player-one-hand" class="players-hand float-left"></div>
 	<div class="player-control-panel">
 		<button type="button" class="card-control" onclick="addCardToPlayersHand('player-one',$('#next-card'));">Pull it</button><br>
@@ -19,11 +32,14 @@
 
 <template name="opponents_view">
 <div id="player-two-container" class="players-view">
-	<h4 class="players-name">Player Two</h4>
+	<h4 class="players-name">Opponent #1</h4>
 	<div id="player-two-hand" class="players-hand float-left"></div>
-	<div class="player-control-panel">
-		<button type="button" class="card-control" onclick="addCardToPlayersHand('player-two',$('#next-card'));">Pull it</button><br>
-		<button type="button" class="card-control" onclick="addCardToPlayersHand('player-one',$('#next-card'));">Push it</button>
-	</div>
+</div>
+</template>
+
+<template name="dealers_view">
+<div class="dealers-view">
+	<div id="next-card" class="card-large">?</div><br>
+	<button type="button" onclick="$('#next-card').text(Deck.deal().toString());">Deal</button>
 </div>
 </template>
