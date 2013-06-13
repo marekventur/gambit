@@ -2,11 +2,28 @@
 
 </head>
 <body>
-{{#foreach player}
-{{> players_view}}
-{{/foreach}}
+{{> competitor_view}}
+{{> opponents_view }}
 </body>
 
-<template name="players_view">
+<template name="competitor_view">
+<div id="player-one-container" class="players-view">
+	<h4 class="players-name">AAA</h4>
+	<div id="player-one-hand" class="players-hand float-left"></div>
+	<div class="player-control-panel">
+		<button type="button" class="card-control" onclick="addCardToPlayersHand('player-one',$('#next-card'));">Pull it</button><br>
+		<button type="button" class="card-control" onclick="addCardToPlayersHand('player-two',$('#next-card'));">Push it</button>
+	</div>
+</div>
+</template>
 
+<template name="opponents_view">
+<div id="player-two-container" class="players-view">
+	<h4 class="players-name">Player Two</h4>
+	<div id="player-two-hand" class="players-hand float-left"></div>
+	<div class="player-control-panel">
+		<button type="button" class="card-control" onclick="addCardToPlayersHand('player-two',$('#next-card'));">Pull it</button><br>
+		<button type="button" class="card-control" onclick="addCardToPlayersHand('player-one',$('#next-card'));">Push it</button>
+	</div>
+</div>
 </template>
