@@ -2,17 +2,21 @@ Accounts.onCreateUser(function(options,user) {
 		var accessToken = user.services.twitter.accessToken,
 			result,
 			profile;
-		
-		result = Meteor.http.get("https://api.twitter.com/1/account/verify_credentials.json", {
-				requestPermissions: ['user', 'read']
-			});
-		
-		if(result.error)
-			throw result.error;
 			
+		result = Meteor.http.get("https://api.twitter.com/1.1/users/show.json", {
+			params: {
+				access_token: accessToken			
+			}
+		});
+		
+		if (result.error)
+			throw result.error;
+		
 		profile = _.pick(result.data,
-					"screen_name"
-					// ,"" picture please
-					// ,"" age preferably
-					);
-	});
+		"screenName"
+		,"profile_image_url");
+		
+		user.profile = profile;
+		
+		return user;
+});

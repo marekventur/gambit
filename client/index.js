@@ -1,7 +1,9 @@
+Cards = new Meteor.Collection("cards");
+
 Template.user_loggedout.events({
 	"click #login": function (e, tmpl) {
 		Meteor.loginWithTwitter({
-			requestPermissions: ['user','read']
+			requestPermissions: ['screen_name','profile_image_url']
 		}, function(err) {
 				if (err) {
 					alert(err);
