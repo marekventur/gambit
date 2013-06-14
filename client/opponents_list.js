@@ -1,18 +1,21 @@
-var opponents_list = [
+var opponentsData = [
 	{	
-		userId: "Dan",
-		cards[]: {"10","J"}
+		userId: "1",
+		userName: "Dan",
+		cards: ["10","J"]
 	},
 	{	
-		userId: "Paul",
-		cards[]: {"Q","5"}
+		userId: "2",
+		userName: "Paul",
+		cards: ["Q","5"]
 	},
 	{	
-		userId: "Helen",
-		cards[]: {"3","7","2","5"}
-	},
+		userId: "3",
+		userName: "Helen",
+		cards: ["3","7","2","5"]
+	}
 ];
 
 Template.opponents_list.helpers({
-	opponents: opponents_list
+	opponents: opponentsData
 });
