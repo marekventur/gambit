@@ -1,5 +1,5 @@
 Cards = new Meteor.Collection("cards");
 
 Template.competitor_view.userName = function () {
-  return userDisplayName(this);
+	return displayPlayersName(this.user);
 };
