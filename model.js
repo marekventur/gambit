@@ -1,3 +1,3 @@
 displayPlayersName = function(user){
-	return "Daniel";
+	return user.emails["address"];
 }
