@@ -1,0 +1,10 @@
+<template name="competitor_view">
+<div id="{{Meteor.userId}}-container" class="players-view">
+	<h4 class="players-name">Player One</h4>
+	<div id="player-one-hand" class="players-hand float-left"></div>
+	<div class="player-control-panel">
+		<button type="button" class="card-control" onclick="addCardToPlayersHand('player-one',$('#next-card'));">Pull it</button><br>
+		<button type="button" class="card-control" onclick="addCardToPlayersHand('player-two',$('#next-card'));">Push it</button>
+	</div>
+</div>
+</template>
