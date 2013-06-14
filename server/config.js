@@ -1,5 +1,2 @@
-Meteor.startup(function () {
-	Meteor.absoluteUrl('', {replaceLocalhost: true});
-	
-	
+Meteor.startup(function () {	
 });
