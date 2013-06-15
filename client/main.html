@@ -4,8 +4,11 @@
 <body>
 <div class="container-fluid">	
 {{> header}}
-
-{{> opponents_list}}
+{{#if currentUser}}
+	{{> opponents_list}}
+{{else}}
+	{{> games_list}}
+{{/if}}
 </div>
 </body>
 

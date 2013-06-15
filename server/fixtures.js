@@ -75,4 +75,8 @@ if (Players.find().count() === 0){
 		email: "timmy@gamevy.com",
 		cards: ["Q", "5",]
 	});
+	
+	Games.insert({
+		createdBy: "Dan"	
+	});
 }
