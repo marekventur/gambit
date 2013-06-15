@@ -1,8 +1,18 @@
-function Card(rank, suit) {
+
+
+Card = function (rank, suit) {
 	this.rank = rank;
 	this.suit = suit;
 
 	this.toString   = cardToString;
+}
+
+//-----------------------------------------------------------------------------
+// cardFromJson(): We're storing and transmitting only JSON. This helper 
+// function converts a JSON object to a Card object
+//-----------------------------------------------------------------------------
+cardFromJson = function (json) {
+  return new Card(json.rank, json.suit);
 }
 
 //-----------------------------------------------------------------------------
@@ -48,7 +58,7 @@ function cardToString() {
 // Stack constructor function.
 //-----------------------------------------------------------------------------
 
-function Stack() {
+Stack = function () {
 
   // Create an empty array of cards.
 
