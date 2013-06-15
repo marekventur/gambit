@@ -1,5 +1,5 @@
 Template.game.helpers({
-	url: function() {
-		return "";
+	url: function(gameId) {
+		return "/game/"+gameId;
 	}
 })
