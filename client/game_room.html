@@ -1,0 +1,7 @@
+<template name="game_room">
+{{#with game}}
+	<a href="/">Back to Lobby</a>
+	<h1>Game created by {{createdBy}} </h1>
+	{{> opponents_list}}
+{{/with}}
+</template> 
