@@ -89,23 +89,20 @@ function stackMakeDeck(n) {
 }
 
 //-----------------------------------------------------------------------------
-// stackShuffle(n): Shuffles a stack of cards 'n' times. 
+// stackShuffle(): Shuffles a stack of cards
 //-----------------------------------------------------------------------------
 
-function stackShuffle(n) {
-
-  var i, j, k;
+function stackShuffle() {
+  var i, j;
   var temp;
 
-  // Shuffle the stack 'n' times.
-
-  for (i = 0; i < n; i++)
-    for (j = 0; j < this.cards.length; j++) {
-      k = Math.floor(Math.random() * this.cards.length);
-      temp = this.cards[j];
-      this.cards[j] = this.cards[k];
-      this.cards[k] = temp;
-    }
+  // fisher-yates shuffling algorithm (guarantees unbiasedness)
+  for (i = this.cards.length - 1; i >= 1; i--) {
+    j = Math.floor(Math.random() * (i + 1));
+    temp = this.cards[i];
+    this.cards[i] = this.cards[j];
+    this.cards[j] = temp;
+  }
 }
 
 //-----------------------------------------------------------------------------
