@@ -25,3 +25,10 @@ test( "shuffle", function() {
 	stack.shuffle();
   equal( stack.cardCount(), 52);
 });
+
+test( "toString", function() {
+	equal( new Card('A', 'C').toString(), 'A ♣');
+	equal( new Card('J', 'D').toString(), 'J ♦');
+	equal( new Card('Q', 'H').toString(), 'Q ♥');
+	equal( new Card('3', 'S').toString(), '3 ♠');
+});
